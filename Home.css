@@ -8,6 +8,7 @@
     --background-color:#0b0b30;
     --secondary-background-color: #FEFCFF;
     --button-colors:linear-gradient(90deg, #242c72, #4e2a65);
+    --primary-opposite-color:#fec200;
 
     /* font-color */
     --primary-font:white;
@@ -19,6 +20,11 @@
 
     /* Font size for para */
     --font-size-p:clamp(1.5rem, 1.5vw, 10px);
+
+
+    /* box shadow */
+    --hover-shadow-white:0px 0px 16px 5px rgba(255, 255, 255, 0.8);
+    --hover-shadow-secondary:0px 0px 16px 5px rgb(138, 43, 226,0.8) ;
 }
 body {
     font-family: "Bricolage Grotesque", sans-serif;
@@ -28,20 +34,20 @@ body {
     background-repeat: no-repeat ,no-repeat;
     background-size: 1100px 1100px ,1100px 1100px;
     background-position:-100px -300px ,900px -100px ;
-
 }
 
-/* ── Header ── */
+/*  Header  */
 header {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 20px 24px;
-    height: 80px;
-    position: relative;
+    position: fixed;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    padding: 10px;
 }
 
-/* ── Logo ── */
+/*  Logo  */
 .logo a {
     display: flex;
     align-items: center;
@@ -49,11 +55,11 @@ header {
 }
 
 .logo img {
-    height: 36px;
-    width: auto;
+    height: 50px;
+    width: 120px;
 }
 
-/* ── Nav (desktop) ── */
+/*  Nav */
 .navigation {
     display: flex;
     align-items: center;
@@ -71,7 +77,7 @@ header {
 .navigation nav a {
     text-decoration: none;
     color:white;
-    font-size: 15px;
+    font-size: 20px;
     padding: 6px 14px;
     border-radius: 8px;
     transition:  0.6s, color 0.15s;
@@ -82,19 +88,19 @@ header {
     color:var(--background-color);
 }
 
-/* ── Close button (hidden on desktop) ── */
+/*  Close button */
 #menu-close-btn {
     display: none;
 }
 
-/* ── Sign in ── */
+/*  Sign in  */
 .sign-in button {
-    padding: 8px 20px;
+    padding: 10px 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
     background: transparent;
     font-family: inherit;
-    font-size: 14px;
+    font-size: 20px;
     cursor: pointer;
     color: white;
     transition: 0.6s;
@@ -105,7 +111,7 @@ header {
     color: var(--background-color);
 }
 
-/* ── Hamburger button (hidden on desktop) ── */
+/*  Hamburger button   */
 #menu-open-btn {
     padding: 8px;;
     cursor: pointer;
@@ -117,7 +123,7 @@ header {
     border: none;
 }
 
-/* ── Overlay (mobile backdrop) ── */
+/*  Overlay  */
 #nav-overlay {
     display: none;
     position: fixed;
@@ -130,7 +136,7 @@ header {
     display: block;
 }
 
-/* ── Mobile breakpoint ── */
+/* Header Mobile Screen */
 @media (max-width: 900px) {
 
     #menu-open-btn {
@@ -189,10 +195,10 @@ header {
 
 /* Main container */
 main{
-    display: block;
+    display: grid;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    height: 100vh;
    }
 .hero-container{
     display: flex;
@@ -214,7 +220,7 @@ main{
     
 }
 
-
+/* Hero H1 */
 .hero-text h1{
     font-size: var(--font-size-h1);
     margin: 5PX;
@@ -223,6 +229,7 @@ main{
     font-size: var(--font-size-p);
     margin-top: 10px;
 }
+/* Hero contact for more button  */
 .hero-btn-container button{
     width: 500px;
     height: 70px;
@@ -233,15 +240,24 @@ main{
     border: 1px solid white;
     margin-top: 50px;
     font-size: var(--font-size-p);  
+    cursor: pointer;
+    transition:0.6s ease-in-out;
 }
+/* Hero contact for more button hover effect */
 
+.hero-btn-container button:hover{
+    box-shadow:0px 0px 16px 5px rgba(255, 255, 255, 0.4);
+    transform: translateY(-5px);
+}
 
 /* Hero right side */
 .hero-right{
     max-width:800px ;
 }
+
+/* Hero image  */
 .hero-image img{
-    max-width:clamp(600px, 50vw, 500px);
+    max-width:clamp(600px, 50vw, 200px);
     z-index: 100;
 }
 .hero-buttom{
@@ -254,9 +270,17 @@ main{
     border-radius: 25px;
     position: relative;
     top: -30px;
+    transition:0.7s ease-in-out;
+}
+.hero-buttom:hover{
+    box-shadow:var(--hover-shadow-secondary);
 }
 .hero-achieve h3{
     font-size: var(--font-size-h3);
 }
+
+
+/* running text container */
+
 
 
