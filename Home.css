@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    /* Background colors */
+    --background-color:#0b0b30;
+    --secondary-background-color: #FEFCFF;
+    --button-colors:linear-gradient(90deg, #242c72, #4e2a65);
+
+    /* font-color */
+    --primary-font:white;
+
+    /* Font size heading*/
+    --font-size-h1:clamp(7.5rem, 4vw, 68px);
+    --font-size-h2:clamp(4.5rem, 3.5vw, 36px);
+    --font-size-h3:clamp(2.5rem, 2.5vw, 28px);
+
+    /* Font size for para */
+    --font-size-p:clamp(1.5rem, 1.5vw, 10px);
+}
+body {
+    font-family: "Bricolage Grotesque", sans-serif;
+    background:var(--background-color);
+    color:white;
+    background-image: url('./Assets/left image.webp'),url(./Assets/right\ image.webp);
+    background-repeat: no-repeat ,no-repeat;
+    background-size: 1100px 1100px ,1100px 1100px;
+    background-position:-100px -300px ,900px -100px ;
+
+}
+
+/* ── Header ── */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 24px;
+    height: 80px;
+    position: relative;
+}
+
+/* ── Logo ── */
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    height: 36px;
+    width: auto;
+}
+
+/* ── Nav (desktop) ── */
+.navigation {
+    display: flex;
+    align-items: center;
+    width: 30%;
+}
+
+.navigation nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
+.navigation nav a {
+    text-decoration: none;
+    color:white;
+    font-size: 15px;
+    padding: 6px 14px;
+    border-radius: 8px;
+    transition:  0.6s, color 0.15s;
+}
+
+.navigation nav a:hover {
+    background: #f3f3f3;
+    color:var(--background-color);
+}
+
+/* ── Close button (hidden on desktop) ── */
+#menu-close-btn {
+    display: none;
+}
+
+/* ── Sign in ── */
+.sign-in button {
+    padding: 8px 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: transparent;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    color: white;
+    transition: 0.6s;
+}
+
+.sign-in button:hover {
+    background: #f3f3f3;
+    color: var(--background-color);
+}
+
+/* ── Hamburger button (hidden on desktop) ── */
+#menu-open-btn {
+    padding: 8px;;
+    cursor: pointer;
+    font-size: 20px;
+    color:rgb(255, 255, 255);
+    line-height: 1;
+    background:none;
+    display: none;
+    border: none;
+}
+
+/* ── Overlay (mobile backdrop) ── */
+#nav-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 99;
+}
+
+#nav-overlay.active {
+    display: block;
+}
+
+/* ── Mobile breakpoint ── */
+@media (max-width: 900px) {
+
+    #menu-open-btn {
+        display: block;
+        background:transparent;
+    }
+
+    /* Drawer panel */
+    .navigation {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 260px;
+        height: 100vh;
+        background:var(--background-color);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 20px 32px;
+        gap: 20px;
+        z-index: 100;
+        box-shadow: -4px 0 24px rgba(255, 255, 255, 0.08);
+        transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .navigation.open {
+        right: 0;
+    }
+
+    /* Close × button visible inside drawer */
+    #menu-close-btn {
+        display: flex;
+        align-self: flex-end;
+        background: transparent;
+        border: none;
+        font-size: 20px;
+        color:white;
+        cursor: pointer;
+        padding: 4px 8px;
+        margin-bottom: 24px;
+    }
+
+    .navigation nav {
+        flex-direction: column;
+        gap: 4px;
+        width: 100%;
+    }
+
+    .navigation nav a {
+        font-size: 16px;
+        padding: 10px 12px;
+        border-radius: 8px;
+        display: block;
+    }
+}
+
+
+/* Main container */
+main{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+   }
+.hero-container{
+    display: flex;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+/* Hero-left side */
+.hero-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start ;
+    flex: wrap;
+    max-width: 800px;
+    
+}
+
+
+.hero-text h1{
+    font-size: var(--font-size-h1);
+    margin: 5PX;
+}
+.hero-text p{
+    font-size: var(--font-size-p);
+    margin-top: 10px;
+}
+.hero-btn-container button{
+    width: 500px;
+    height: 70px;
+    text-align: center;
+    background: var(--button-colors);
+    color: white;
+    border-radius: 50px;
+    border: 1px solid white;
+    margin-top: 50px;
+    font-size: var(--font-size-p);  
+}
+
+
+/* Hero right side */
+.hero-right{
+    max-width:800px ;
+}
+.hero-image img{
+    max-width:clamp(600px, 50vw, 500px);
+    z-index: 100;
+}
+.hero-buttom{
+    background:var(--button-colors);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 90px;
+    border: 1px solid white;
+    border-radius: 25px;
+    position: relative;
+    top: -30px;
+}
+.hero-achieve h3{
+    font-size: var(--font-size-h3);
+}
+
+
