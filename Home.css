@@ -5,6 +5,7 @@
   }
 html, body {
     overflow-x: hidden;  
+    scroll-behavior: smooth;
 }
     :root {
         --background-color: #0b0b30;
