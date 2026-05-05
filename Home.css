@@ -476,7 +476,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
-        min-height: 250px;
+        min-height: 350px;
         max-width: 350px;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -489,11 +489,16 @@
     }
 
     .card .logo {
-        width: 50px;
-        height: 50px;
+        width: 70px;
+        height: 70px;
         background: var(--button-colors);
         border-radius: 50%;
         margin-bottom: 10px;
+        display: flex;
+        color: white;
+        justify-content: center;
+        align-items: center ;
+        font-size: 35px;
     }
 
     .card-text h3 {
@@ -537,7 +542,7 @@
         justify-content: center;
         align-items: center;
         gap: 40px;
-        max-width: 1200px;
+        max-width: 1400px;
         margin: 0 auto;
         flex-wrap: wrap;
     }
