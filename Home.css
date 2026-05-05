@@ -131,6 +131,7 @@ html, body {
         justify-content: space-between;
         align-items: center;
         gap: 8px;
+    
     }
 
     .navigation nav a {
@@ -179,13 +180,6 @@ html, body {
         border: none;
     }
 
-    #nav-overlay {
-        display: none;
-        position: fixed;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.35);
-        z-index: 99;
-    }
 
     #nav-overlay.active {
         display: block;
@@ -340,13 +334,13 @@ html, body {
             right: -100%;
             width: 260px;
             height: 100vh;
-            background: var(--background-color);
+            background:var(--background-color);
             flex-direction: column;
             align-items: flex-start;
             padding: 20px 20px 32px;
             gap: 20px;
-            z-index: 100;
-            box-shadow: -4px 0 24px rgba(255, 255, 255, 0.08);
+            z-index: 10000;
+            color: white;
             transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -376,6 +370,7 @@ html, body {
             font-size: 16px;
             padding: 10px 12px;
             display: block;
+            color: white    ;
         }
     }
 
@@ -559,6 +554,8 @@ html, body {
         padding: 80px 20px;
         background: var(--background-color);
         color: white;
+        display: flex;
+        justify-content: center;
     }
 
     .about-container {
@@ -684,11 +681,13 @@ html, body {
         color: var(--background-color);
         padding: 40px 20px;
         margin-top: 100px;
+        display: flex;
+        justify-content: center;
     }
 
     .footer-container {
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: flex-start;
         max-width: 1200px;
         flex-wrap: wrap;
