@@ -297,17 +297,13 @@ header.scrolled {
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.5);
         display: none;
         z-index: 9999;
         opacity: 0;
         transition: opacity 0.3s ease;
     }
 
-    #nav-overlay.active {
-        display: block;
-        opacity: 1;
-    }
+ 
 
     .mobile-sign-in {
         display: none;
@@ -500,7 +496,7 @@ header.scrolled {
             flex-direction: column;
             align-items: stretch;
             padding: 0;
-            gap: 0;
+            gap: 10px;
             z-index: 10000;
             color: white;
             transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
