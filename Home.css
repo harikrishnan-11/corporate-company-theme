@@ -1496,7 +1496,7 @@ header.scrolled {
 /* Socials */
 .socials {
     display: flex;
-    gap: 12px;
+    gap: 12px;  
     flex-wrap: wrap;
     margin-top: 4px;
 }
@@ -1509,16 +1509,16 @@ header.scrolled {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--background-color);
+    color:white;
     font-size: 14px;
     text-decoration: none;
     transition: background 0.3s, color 0.3s, border-color 0.3s, transform 0.3s;
 }
 
 .socials a:hover {
-    background: var(--background-color);
+    background:var(--background-color);
     color: var(--primary-opposite-color);
-    border-color: var(--background-color);
+    border-color: var(--primary-opposite-color);
     transform: translateY(-3px);
 }
 
