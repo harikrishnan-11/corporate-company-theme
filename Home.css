@@ -1574,12 +1574,13 @@ header.scrolled {
 }
 
 .footer-contact-list li i {
-    color: var(--background-color);
+    color:white ;
     font-size: 14px;
     margin-top: 3px;
     flex-shrink: 0;
     width: 16px;
     text-align: center;
+   
 }
 
 .footer-contact-list li a {
