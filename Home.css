@@ -114,7 +114,6 @@ html{
         position: fixed;
         width: 100%;
         background:var(--background-color);
-        backdrop-filter: blur(10px);
         padding: 10px;
         z-index: 50;
     }
