@@ -205,7 +205,7 @@ header.scrolled {
         font-family: "Bricolage Grotesque", sans-serif;
         background: var(--background-color);
         color: white;
-        background-image: url('./Assets/left image.webp'), url('./Assets/right image.webp');
+        background-image: url('./Assets/left\ image-100kb.webp'), url('./Assets/right\ image-100kb.webp');
         background-repeat: no-repeat, no-repeat;
         background-size: 1100px 1100px, 1100px 1100px;
         background-position: -100px -300px, 900px -100px;
