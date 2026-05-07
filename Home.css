@@ -1397,7 +1397,7 @@ header.scrolled {
             font-weight: 700;
             padding: 4px 12px;
             border-radius: 20px;
-            margin-bottom: 12px;
+            margin: 12px 0;
             text-transform: uppercase;
             letter-spacing: 0.05em;
         }
