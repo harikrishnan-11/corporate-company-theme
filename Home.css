@@ -12,7 +12,7 @@ html{
 
     :root {
         --background-color: #0b0b30;
-        --secondary-background-color: #FEFCFF;
+        --secondary-background-color:#f8faff;
         --button-colors: linear-gradient(90deg, #242c72, #4e2a65);
         --primary-opposite-color: #fec200;
         --primary-font: white;
@@ -917,7 +917,7 @@ header.scrolled {
     /* Services Preview */
     .services-preview {
         padding: 80px 20px;
-        background: linear-gradient(to bottom,#f8f9ff,#eef2ff);
+        background:#f8faff;
         color: var(--background-color);
         text-align: center;
     }
@@ -969,8 +969,6 @@ header.scrolled {
     transition: 0.4s ease;
 }
 .service-item:hover i{
-    background: var(--button-colors);
-    color: white;
     transform: scale(1.1);
 }
 
