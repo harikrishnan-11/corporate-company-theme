@@ -1376,10 +1376,10 @@ header.scrolled {
             transform: translateY(-6px);
             box-shadow: 0 0 28px rgba(78,42,101,0.25);
         }
-        .blog-card-thumb {
+        .blog-card-thumb img{
             width: 100%;
             height: 180px;
-            background: var(--button-colors);
+            object-fit: cover;
             display: flex;
             align-items: center;
             justify-content: center;
